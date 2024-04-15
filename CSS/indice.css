@@ -1,0 +1,63 @@
+body{
+    background-image: url(./UI_materials/assets/bg.jpg);
+    padding: 0 3em;
+    color:white;
+    font-family: ;
+    }
+    
+    .purple{
+    color: #d20094;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .button{
+    font-weight: bold;
+    border: 2px white solid;
+    padding:;
+    margin:;
+    text-align: center;
+    shadow?:;
+    }
+    
+    .button :hover{
+    background-color: #00FFFf;
+    color: #bbb;
+    shadow:;
+    }
+    
+    .bold{
+    font-weight: bold;
+    }
+    
+    .azzure{
+    color: #00ffff;
+
+    }
+    
+    .logo{
+        padding:;
+        margin:;
+    }
+    
+    .btn{
+    border:2px solid white;
+    border-radius: 3em;
+    padding: ;
+    margin:;
+    text-align:  center;
+    background-color: 0 0 0 0;
+    }
+    
+    .btn:hover{
+    border: 2px solid #d20094;
+    background-color: #900080;
+    }
+
+    .title{
+        font-family: ;
+        font-size: 60px;
+        text-align: center;
+    }
