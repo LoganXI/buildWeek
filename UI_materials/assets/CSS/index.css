@@ -1,0 +1,130 @@
+body{
+    background-image: url(/buildWeek/UI_materials/assets/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+     padding: 5% 10% 10% 10%; 
+    color:white;
+    font-size: 20px;
+    font-family: "Inter";
+    }
+    /******************************* HEADER *****************************/
+    .logo {
+        width: 150px;
+        height: 35px;
+    
+
+    }
+    /****************************** DIV TITOLO **************************/
+    .Titolo {
+        font-family: "Outfit";
+        font-size: 4vw;
+        font-weight: 200;
+        margin-top: 1em;
+    }
+
+    /****************************** PARAGRAFO ********************************/
+    .purple {
+        color: #d20094;
+    }    
+
+    .paragrafo {
+        margin-bottom: 3em;
+        font-family: "Inter",sans-serif;
+        font-weight: 200;
+    
+    }
+    /****************************** NAV *********************************/
+    #lista {
+        margin-top: 5em;
+        margin-bottom: 8em;
+    }
+
+    .elenco {
+        margin-bottom: 1em;
+    }
+    /****************************** FORM *************************************/
+    .mycheck {
+        border: solid 3px white;
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+    }
+    
+    .checkbox-label {
+        margin-right: 31em;
+        
+    }
+    .checkbox-type {
+    
+       /* background-color:0005;*/
+        /* border: solid 4px white ;
+        margin-right: 15px; */
+        opacity: 0;
+    
+      transform: scale(1.5);
+      margin-left: 1px;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+  
+    .button {
+    background-color: transparent;   
+    font-weight:bold;
+    text-transform: uppercase;
+    border: white 3px solid;
+    font-size: 20px;
+    width: 220px;
+    height: 60px;
+    display: inline-block;
+        /* margin-bottom: 20em; */
+    box-sizing: content-box;
+   color: white;
+    /* margin-right: 10em; */
+    }
+    
+    /*********************************************************************************************/
+
+
+    .button:hover{
+    background-color:#00fff0;
+    box-sizing: content-box;
+    box-shadow: 0px 10px 40px  #00fff0;
+    color:black;
+    border: #00fff0;
+  
+    }
+    
+    .bold{
+    font-weight: bold;
+    }
+    
+    .azzure{
+    color: #00fff0;
+    }
+    
+    .violetto{
+    color: #d20094;
+    }
+    
+    .logo{
+        
+    }
+    
+    .btn{
+    border 2px solid white
+    borderradius
+    padding 
+    margin
+    text align center
+    background color (trasparente)
+    }
+    
+    .btn:hover{
+    border 2px solid purple
+    bcg purple
+    }
+    
+    

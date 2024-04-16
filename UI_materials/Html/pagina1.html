@@ -1,36 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/buildWeek/UI_materials/assets/CSS/index.css">
 </head>
+
 <body>
-   <header>
-        <a href="../assets/epicode_logo.png">
-   </header> 
-   <div>
-        <h1>Welcome to <span>your exam</span></h1>
-   </div>
-   <main>
-        <h3>Instructions</h3>
-        <p>
-            We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of a few of them.
+    <header>
+        <img src="/buildWeek/UI_materials/assets/img/epicode_logo.png" class="logo" alt="logo_epicode">
+    </header>
+    <div>
+        <h1 class="Titolo">Welcome to <br>
+            <span class="bold">your exam</span>
+        </h1>
+    </div>
+    <main>
+        <h2 class="purple">Instructions</h2>
+        <p class="paragrafo">
+            We don't expect most engineers to know the answers to all of these <br>
+            questions, so don't worry if you're unsure of a few of them.
         </p>
-        <nav>
-            <ul>
-                <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
-                <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.</li>
-                <li>This exam will take approx. <span>0-5 minutes</span>.</li>
-            </ul>
-        </nav>
-   </main>
-   <form>
-            <label for="autorizzo">I promise to answer myself without help from anyone</label>
-            <input type="checkbox" name="autorizzo" checked>
-   </form>
-   <footer>
-    <button type="submit"></button>
-   </footer>
+
+        <ul id="lista">
+            <li class="elenco">Each question is <span class="bold">timed</span> and can only be <span
+                    class="bold">answered once</span>.</li>
+            <li class="elenco">Changing browser tab or opening other windows will <span>invalidate the question</span>.
+            </li>
+            <li class="elenco">This exam will take approx. <span class="bold">0-5 minutes</span>.</li>
+        </ul>
+        <div>
+            <form>
+                <span class="mycheck">
+                    <input type="checkbox" name="autorizzo" class="checkbox-type" required>
+                </span>
+                <label class="checkbox-label" for="autorizzo">
+                     I promise to answer myself without help from anyone
+                </label>
+
+                <button type="submit" class="button">Proceed</button>
+
+            </form>
+        </div>
+    </main>
+
 </body>
+
 </html>
