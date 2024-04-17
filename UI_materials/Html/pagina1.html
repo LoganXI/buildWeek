@@ -32,24 +32,20 @@
         </p>
 
         <ul id="lista">
-            <li class="elenco">Each question is <span class="bold">timed</span> and can only be <span
-                    class="bold">answered once</span>.</li>
+            <li class="elenco">Each question is <span class="bold">timed</span> and can only be <span class="bold">answered once</span>.</li>
             <li class="elenco">Changing browser tab or opening other windows will <span>invalidate the question</span>.
             </li>
             <li class="elenco">This exam will take approx. <span class="bold">0-5 minutes</span>.</li>
         </ul>
         <div>
             <form>
-                <span class="mycheck">
-                    <input type="radio" name="autorizzo" value="option1" class="square-radio" required>
-                </span>
-                <label class="checkbox-label" for="autorizzo">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="myCheckbox" required>
+                    <span class="checkmark"></span>
                      <b>I promise to answer myself without help from anyone</b>
                 </label>
-
-                <button type="submit" class="button">Proceed</button>
-
-            </form>
+               <button type="submit" class="button">Proceed</button>
+             </form>
         </div>
     </main>
 
