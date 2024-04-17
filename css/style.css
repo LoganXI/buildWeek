@@ -1,70 +1,155 @@
-body{
-    background-image: url(./UI_materials/assets/bg.jpg);
-    padding: 0 3em;
-    color:white;
-    font-family: ;
-    }
-    
-    .purple{
-    color: #d20094;
-    }
-    
-    .center{
-        text-align: center;
-    }
-    
-    .button{
-    font-weight: bold;
-    border: 2px white solid;
-    padding:;
-    margin:;
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.center {
     text-align: center;
-    shadow?:;
-    }
-    
-    .button :hover{
-    background-color: #00FFFf;
-    color: #bbb;
-    shadow:;
-    }
-    
-    .bold{
+}
+
+.button {
     font-weight: bold;
-    }
-    
-    .azzure{
+    font-size: 20px;
+    border: 3px solid white;
+    width: 17em;
+    height: 4em;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 2em;
+    margin-top: 2em;
+
+}
+
+.button:hover {
+    background-color: #00FFFf;
+    color: black;
+    box-shadow: 4px 8px 50px #00FFFf;
+    border: 3px solid #00FFFf;
+}
+
+.rate-me-text {
+    font-size: 30px;
+}
+
+.azzure {
     color: #00ffff;
+}
 
-    }
+.title {
+    text-align: center;
+    line-height: 3em;
+}
 
-    .content {
-        margin: 25px;
-    }
-    
-    .logo{
-        padding:0;
-        margin:0;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    
-    .btn{
-    border:2px solid white;
-    border-radius: 3em;
-    padding: ;
-    margin:;
-    text-align:  center;
-    background-color: 0 0 0 0;
-    }
-    
-    .btn:hover{
-    border: 2px solid #d20094;
-    background-color: #900080;
-    }
+.title h1 {
+    font-size: 70px;
+}
 
-    .title{
-        font-family: ;
-        font-size: 60px;
-        text-align: center;
-    }
+.title p {
+    font-size: 30px;
+}
+
+
+.title h1,
+p {
+    line-height: 0.8em;
+}
+
+#Results {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.correctDiv,
+.wrongDiv,
+.chart-box {
+    text-align: center;
+
+}
+
+.correctDiv,
+.wrongDiv {
+    font-size: 40pt;
+    text-align: justify;
+
+}
+
+.correctDiv {
+    margin-left: 4em;
+    text-align: left;
+
+
+}
+
+.correct-result,
+.uncorrect-result {
+    font-size: 80pt;
+}
+
+.wrongDiv {
+    margin-right: 4em;
+    text-align: right;
+}
+
+.questions {
+    font-size: 25pt;
+    color: rgba(255, 255, 255, 0.514);
+}
+
+
+
+.chart-box {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+
+}
+
+.div-into-chart {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    word-wrap: break-word;
+    border-radius: 50%;
+    line-height: 1.2;
+}
+
+.headingText {
+    margin-top: 3em;
+    line-height: 0;
+    font-size: 1.5em;
+}
+
+.subtitleText {
+    font-size: 1.3em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.descriptionText {
+    color: rgba(255, 255, 255, 0.734);
+}
+
+
+.logo {
+    margin-left: 7em;
+    margin-top: 1em;
+}
+
+.buttonDiv {
+    text-align: center;
+}
