@@ -182,6 +182,11 @@ function updateTimer() {
   if (timeLeft < 0) {
     clearInterval(timerInterval);
     label.textContent = 'Tempo scaduto';
+    setTimeout(() => {
+      renderQuestionAndAnswers();
+      timeLeft = totalTime; // Reimposta il tempo per la nuova domanda
+      timerInterval = setInterval(updateTimer, updateInterval); // Avvia il nuovo timer
+    }, 1000);
   } 
 }
 
