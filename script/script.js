@@ -1,28 +1,48 @@
 const correctAnswers = 6;
 
-function resultPerc (correctAnswers) {
-    let correct = correctAnswers ;
-    let uncorrect = 6 - correct ;
-
-    const correctDiv = document.getElementsByClassName('.correctDiv');
-    const wrongDiv = document.getElementsByClassName('.wrongDiv');
-
-
-}
-
 const chartData = {
     labels: ['risposte sbagliate', 'risposte corrette'],
     data: (function inputData(correctAnswers) {
-        // var del tot di risposte
-        
-        let correct = correctAnswers ;
-        let uncorrect = 6 - correct ;
+        let correct = correctAnswers;
+        let uncorrect = 10 - correct;
         var result = [uncorrect, correct]
+
+        document.getElementById('correct-percentual').innerHTML = `${correct * 10}%`
+        document.getElementById('un-result').innerHTML = `${uncorrect * 10}%`
+
+        document.getElementById('span-correct').innerHTML = `${correct}`
+        document.getElementById('span-wrong').innerHTML = `${uncorrect}`
+
+        if (correct >= 6) {
+            document.getElementById('text-inner-chart').innerHTML =
+            `
+            <h1 class='headingText'>Congratulation!</h1>      
+            <p class='subtitleText azzure'>You passed the exam.</p>
+            <p class='descriptionText'>We'll send you the certificate in few minutes. Check you email (including promotions / spam folder)</p>    
+            `
+        }
+        if (correct==5) {
+            document.getElementById('text-inner-chart').innerHTML =
+            `
+            <h1 class='headingText'>Oh crap!</h1>      
+            <p class='subtitleText azzure'>You almost did it.</p>
+            <p class='descriptionText'>You probably deserve a 6 or major score, but that is not what happened.<br>Just try next time</p>    
+            `
+        }
+        if (correct<5) {
+            document.getElementById('text-inner-chart').innerHTML =
+            `
+            <h1 class='headingText'>What a mess bro!</h1>      
+            <p class='subtitleText azzure'>You did not passed the exam.</p>
+            <p class='descriptionText'>We'll send you a croissant in few minutes. Check you email (including promotions / spam folder)</p>    
+            `
+        }
+
         return result
     })(correctAnswers)
 }
 
-/*  costruzione della chart (in questo caso a ciambella, ovvero, 'doughnut') */
+/*************************************  costruzione della chart (in questo caso 'doughnut')  *********************************************/
 // setup block
 
 const data = {
@@ -66,19 +86,3 @@ const myChart = new Chart(
     document.getElementById('my-chart'),
     config
 )
-
-
-
-
-
-
-/* 
-Congratulations!
-you passed the exam.
-
-we'll send you the certificate
-in few minutes.
-Check you email (including
-promotions / spam folder)
-*/
-

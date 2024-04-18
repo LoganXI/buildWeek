@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <title>Grafico risultato</title>
+    <title>Pagina 3</title>
 </head>
 
 <body>
@@ -31,28 +31,22 @@
 
                 <div class="correctDiv">
                     <h1>CORRECT</h1>
-                    <p class="correct-result"></p>
-                    <p class="questions"><span>-/-</span> questions </p>
+                    <p id="correct-percentual" class="correct-result"></p>
+                    <p class="questions"><span id="span-correct"></span> / 10 questions </p>
                 </div>
 
                 <div class="chart-box">
 
                     <canvas id="my-chart" class="center"></canvas>
 
-                    <div class="div-into-chart">
+                    <div id="text-inner-chart" class="div-into-chart">
 
                         <!--inserimento del templates
-                            <h1 class='headingText'> </h1> -> titolo
-                            <p class='subtitleText azzure'> </p> -> sottotitolo
-                            <p class='descriptionText'> </p> -> descrizione
+                            <h1 class='headingText'></h1>              -> titolo
+                            <p class='subtitleText azzure'></p>        -> sottotitolo
+                            <p class='descriptionText'></p>            -> descrizione
                         -->
-
-                        <h1 class="headingText">CONGRATULATION!</h1>
-                        <p class="subtitleText azzure">You passed the exam.</p>
-                        <p class="descriptionText">We'll send you the certificate <br>in few minutes.
-                            <br> Check you email (including <br> promotions / spam folder)
-                        </p>
-
+                        
                     </div>
 
                 </div>
@@ -60,8 +54,8 @@
 
                 <div class="wrongDiv">
                     <h1> WRONG</h1>
-                    <p class="uncorrect-result">80%</p>
-                    <p class="questions"><span>-/-</span> questions </p>
+                    <p id="un-result" class="uncorrect-result"></p>
+                    <p class="questions"><span id="span-wrong"></span> / 10 questions </p>
                 </div>
 
             </div>
