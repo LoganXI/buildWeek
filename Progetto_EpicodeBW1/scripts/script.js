@@ -186,57 +186,38 @@ window.onload = function () {
 };
 /* Timer! */
 
-// Imposta il tempo in secondi
-const totalTime = 5; // Ad esempio, 60 secondi
+const totalTime = 30; // Ad esempio, 30 seconds
+  const progress = document.querySelector('.timer-circle-progress');
+  const label = document.querySelector('.secondi');
+  const updateInterval = 1000;
+  const increment = 280 / totalTime;
+  let timeLeft = totalTime;
 
-// Ottieni riferimenti agli elementi HTML
-const progress = document.querySelector('.timer-circle-progress');
-const label = document.querySelector('.timer-label');
-
-// Calcola l'intervallo di aggiornamento del timer
-const updateInterval = 1000; // Ogni secondo
-
-// Calcola l'incremento dello stroke-dashoffset
-const increment = 280 / totalTime;
-
-// Imposta il tempo iniziale
-let timeLeft = totalTime;
-
-// Funzione per aggiornare il timer
-function updateTimer() {
-    // Aggiorna lo stroke-dashoffset
+  function updateTimer() {
     progress.style.strokeDashoffset = (timeLeft * increment);
-
-    // Aggiorna l'etichetta del timer
-    const minutes = Math.floor(timeLeft / 60);
-    const seconds = timeLeft % 60;
-    label.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
-    // Riduci il tempo rimanente
+    label.textContent = timeLeft;
     timeLeft--;
-
-    // Verifica se il tempo è scaduto
+  
     if (timeLeft < 0) {
-        clearInterval(timerInterval);
-        label.textContent = 'Tempo scaduto';
-        if (domandaAtt === quanty) {
-            setTimeout(() => {
+      clearInterval(timerInterval);
+      label.textContent = 'Tempo scaduto';
+      if (domandaAtt === quanty) {
+        setTimeout(() => {
 
-                window.location.href = "pagina3.html";
-                clearInterval(timerInterval);
-                // Avvia il nuovo timer
-            }, 1000);
-        } else {
-            setTimeout(() => {
-                domandaAtt++;
-                renderQuestionAndAnswers(domandaAtt);
-                timeLeft = totalTime; // Reimposta il tempo per la nuova domanda
-                timerInterval = setInterval(updateTimer, updateInterval); // Avvia il nuovo timer
-            }, 1000);
-        }
-
+            window.location.href = "pagina3.html";
+            clearInterval(timerInterval);
+            // Avvia il nuovo timer
+        }, 1000);
+    } else {
+        setTimeout(() => {
+            domandaAtt++;
+            renderQuestionAndAnswers(domandaAtt);
+            timeLeft = totalTime; // Reimposta il tempo per la nuova domanda
+            timerInterval = setInterval(updateTimer, updateInterval); // Avvia il nuovo timer
+        }, 1000);
     }
-}
+    }
+  }
 
 
 
@@ -294,7 +275,7 @@ function renderQuestionAndAnswers(numDomanda) {
 
                 renderQuestionAndAnswers(numDomanda + 1);
             }
-            timeLeft = 5; // Render next question after answering
+            timeLeft = 30; // Render next question after answering
         });
         answersContainer.appendChild(button);
     });
