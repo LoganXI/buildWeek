@@ -1,11 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionario</title>
+    <link rel="stylesheet" href="CSS/indice.css">
 </head>
+
 <body>
-    <header></header>
+    <!--LOGO EPICODE-->
+    <header id="logo">
+
+        <div>
+            <img class="logo" src="UI_materials/assets/epicode_logo.png" alt="LogoEpicode">
+
+        </div>
+
+
+    </header>
+
+    <main>
+        <!--Titolo pagina-->
+        <h2 class="title" >Tell us how it's going</h2>
+
+        <div id="valutazione">
+
+            <p id="primoParagrafo">From 0 to 10, how likely are you to reccommend EPICODE to a friend or a colleague?
+            </p>
+
+            <!--DIV CONTENENTE LE STELLE PER LA VALUTAZIONE-->
+            <div id="stars" aria-required="true">
+
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                
+
+            </div>
+        </div>
+
+        <!--FEEDBACK-->
+        <form id="feedback">
+
+            <p id="secondoParagrafo" >Leave us an open feedback about your experience so far </p>
+
+            <input type="text" placeholder="Write your comment here" required>
+            
+
+            <button class="button"><a href=""></a>MORE INFO</button>
+
+        </form>
+
+
+    </main>
+
+    <script src="question.js" defeder></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
