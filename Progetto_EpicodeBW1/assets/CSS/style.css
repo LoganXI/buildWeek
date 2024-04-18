@@ -1,0 +1,152 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(../img/bg.jpg);
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.logo {
+    margin: 0 7em;
+    margin-top: 1em;
+}
+
+.center {
+    text-align: center;
+}
+
+.button {
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid white;
+    width: 17em;
+    height: 4em;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    box-shadow: 4px 8px 50px #00ffff46;
+
+}
+
+.button:hover {
+    background-color: #00FFFf;
+    color: black;
+    box-shadow: 4px 8px 50px #00FFFf;
+    border: 3px solid #00FFFf;
+}
+
+.rate-me-text {
+    font-size: 30px;
+}
+
+.azzure {
+    color: #00ffff;
+}
+
+.title {
+    text-align: center;
+    line-height: 3em;
+}
+
+.title h1 {
+    font-size: 70px;
+}
+
+.title p {
+    font-size: 30px;
+}
+
+
+.title h1,
+p {
+    line-height: 0.8em;
+}
+
+#Results {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.correctDiv,
+.wrongDiv,
+.chart-box {
+    text-align: center;
+
+}
+
+.correctDiv,
+.wrongDiv {
+    font-size: 40pt;
+   
+
+}
+
+.correctDiv {
+    
+    margin-left: 4em;
+    text-align: left;
+}
+
+.correct-result,
+.uncorrect-result {
+    font-size: 80pt;
+}
+
+.wrongDiv {
+    margin-right: 4.5em;
+    text-align: right;
+}
+
+.questions {
+    font-size: 25pt;
+    color: rgba(255, 255, 255, 0.514);
+}
+
+
+
+.chart-box {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.div-into-chart {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    word-wrap: break-word;
+    border-radius: 50%;
+    line-height: 1.2;
+}
+
+.headingText {
+    margin-top: 3em;
+    line-height: 0;
+    font-size: 1.5em;
+}
+
+.subtitleText {
+    font-size: 1.3em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.descriptionText {
+    color: rgba(255, 255, 255, 0.734);
+}
+
+.buttonDiv {
+    text-align: center;
+}
