@@ -187,37 +187,45 @@ window.onload = function () {
 /* Timer! */
 
 const totalTime = 30; // Ad esempio, 30 seconds
-  const progress = document.querySelector('.timer-circle-progress');
-  const label = document.querySelector('.secondi');
-  const updateInterval = 1000;
-  const increment = 280 / totalTime;
-  let timeLeft = totalTime;
+const progress = document.querySelector('.timer-circle-progress');
+const label = document.querySelector('.secondi');
+const updateInterval = 1000;
+let totalRadius = 360;
+let circ = (46 * 2) * Math.PI;// utilizzo il raggio preso dal html e sommo meta dello spessore del circle per avere un totale dello spazio
+const increment = circ / totalTime;
+let timeLeft = totalTime;
 
-  function updateTimer() {
-    progress.style.strokeDashoffset = (timeLeft * increment);
+function updateTimer() {
+    progress.style.strokeDashoffset = totalRadius;
+
+    // circ = circ - increment;
+    totalRadius = totalRadius - increment;
     label.textContent = timeLeft;
     timeLeft--;
-  
-    if (timeLeft < 0) {
-      clearInterval(timerInterval);
-      label.textContent = 'Tempo scaduto';
-      if (domandaAtt === quanty) {
-        setTimeout(() => {
 
-            window.location.href = "pagina3.html";
-            clearInterval(timerInterval);
-            // Avvia il nuovo timer
-        }, 1000);
-    } else {
-        setTimeout(() => {
-            domandaAtt++;
-            renderQuestionAndAnswers(domandaAtt);
-            timeLeft = totalTime; // Reimposta il tempo per la nuova domanda
-            timerInterval = setInterval(updateTimer, updateInterval); // Avvia il nuovo timer
-        }, 1000);
+    if (timeLeft < 0) {
+        clearInterval(timerInterval);
+        label.textContent = 'Tempo scaduto';
+        if (domandaAtt === quanty) {
+            setTimeout(() => {
+
+                window.location.href = "pagina3.html";
+                clearInterval(timerInterval);
+
+                // Avvia il nuovo timer
+            }, 1000);
+        } else {
+            setTimeout(() => {
+                domandaAtt++;
+                renderQuestionAndAnswers(domandaAtt);
+                timeLeft = totalTime; // Reimposta il tempo per la nuova domanda
+                timerInterval = setInterval(updateTimer, updateInterval); // Avvia il nuovo timer
+                totalRadius = 360;
+                progress.style.strokeDashoffset = totalRadius;
+            }, 1000);
+        }
     }
-    }
-  }
+}
 
 
 
@@ -259,7 +267,7 @@ function renderQuestionAndAnswers(numDomanda) {
         button.classList.add("btn")
         button.textContent = answer;
         button.addEventListener("click", () => {
-
+            clearInterval(timerInterval);
             if (answer === question.correct_answer) {
                 alert("Correct!");
                 corrette++;
@@ -275,7 +283,15 @@ function renderQuestionAndAnswers(numDomanda) {
 
                 renderQuestionAndAnswers(numDomanda + 1);
             }
-            timeLeft = 30; // Render next question after answering
+            setTimeout(() => {
+                timerInterval = setInterval(updateTimer, updateInterval); // Avvia il nuovo timer
+                
+                totalRadius = 360;
+                progress.style.strokeDashoffset = totalRadius;
+                timeLeft = 30;
+            },30);
+
+             // Render next question after answering
         });
         answersContainer.appendChild(button);
     });

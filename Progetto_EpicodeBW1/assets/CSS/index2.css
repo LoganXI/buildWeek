@@ -75,17 +75,17 @@ body {
 
 .timer-container {
   position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    box-sizing: border-box;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
 .timer-svg {
@@ -95,7 +95,7 @@ body {
 
 .timer-circle {
   fill: transparent;
-  stroke-width: 7;
+  stroke-width: 10;
   stroke-linecap: round;
 }
 
@@ -104,8 +104,11 @@ body {
 }
 
 .timer-circle-progress {
+  transform: rotate(270deg);
+  transform-origin: center;
   stroke: #ccc;
-  transition: stroke-dashoffset 1s linear;  
+  transition: stroke-dashoffset 1s linear;
+
 }
 
 .timer-label {
@@ -115,19 +118,20 @@ body {
   transform: translate(-50%, -50%);
   font-size: 0.3em;
   margin: 0;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
-  
+
 }
 
-.secondi{
-  text-align: center ;
+.secondi {
+  text-align: center;
   font-size: 4em;
   font-weight: bold;
 }
+
 .main {
   border: 2px solid green;
 }
