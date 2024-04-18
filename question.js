@@ -167,17 +167,6 @@ const increment = 280 / totalTime;
 // Imposta il tempo iniziale
 let timeLeft = totalTime;
 
-// Avvia il timer
-var timerInterval;
-
-window.onload = function () {
-  document.getElementById("foot").innerHTML = `<p>QUESTION <span id="index">1</span> <span class="purple"> / 10</span></p>`;
-  // TIPS:
-  updateTimer();
-  renderQuestionAndAnswers(1);
-  timerInterval = setInterval(updateTimer, updateInterval); // Avvia il timer
-};
-
 // Funzione per aggiornare il timer
 function updateTimer() {
   // Aggiorna lo stroke-dashoffset
@@ -195,37 +184,22 @@ function updateTimer() {
   if (timeLeft < 0) {
     clearInterval(timerInterval);
     label.textContent = 'Tempo scaduto';
-    // Passa automaticamente alla prossima domanda
     if (domandaAtt === quanty) {
-      window.location.href = "pag4.html";
+      setTimeout(() => {
+        window.location.href = "pag4.html";
+        // Avvia il nuovo timer
+      }, 1000);
     } else {
-      domandaAtt++;
-      renderQuestionAndAnswers(domandaAtt);
-      timeLeft = totalTime; // Reimposta il tempo per la nuova domanda
-      answered = false; // Imposta la risposta dell'utente a false per la nuova domanda
-      timerInterval = setInterval(updateTimer, updateInterval); // Avvia il nuovo timer
+      setTimeout(() => {
+        domandaAtt++;
+        renderQuestionAndAnswers(domandaAtt);
+        timeLeft = totalTime; // Reimposta il tempo per la nuova domanda
+        timerInterval = setInterval(updateTimer, updateInterval); // Avvia il nuovo timer
+      }, 1000);
     }
+
   }
 }
-
-// Aggiungi un listener per il click sul pulsante di passaggio alla domanda successiva
-document.getElementById("nextButton").addEventListener("click", function() {
-  if (!answered) {
-    alert("Rispondi alla domanda prima di passare alla successiva.");
-    return;
-  }
-  if (domandaAtt === quanty) {
-    window.location.href = "pag4.html";
-  } else {
-    domandaAtt++;
-    renderQuestionAndAnswers(domandaAtt);
-    timeLeft = totalTime; // Reimposta il tempo per la nuova domanda
-    answered = false; // Imposta la risposta dell'utente a false per la nuova domanda
-    clearInterval(timerInterval); // Resetta l'intervallo del timer
-    timerInterval = setInterval(updateTimer, updateInterval); // Avvia il nuovo timer
-  }
-});
-
 
 // Aggiorna il timer iniziale
 //updateTimer();
