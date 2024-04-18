@@ -1,136 +1,128 @@
-body{
-    background-image: url(/Progetto_EpicodeBW1/assets/img/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-     padding: 5% 10% 10% 10%; 
-    color:white;
-    font-size: 20px;
-    font-family: "Inter";
-    }
-    /******************************* HEADER *****************************/
-    .logo {
-        width: 150px;
-        height: 35px;
-    
+body {
+  background-image: url(/Progetto_EpicodeBW1/assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 5% 10% 10% 10%;
+  color: white;
+  font-size: 20px;
+  font-family: "Inter";
+}
 
-    }
-    /****************************** DIV TITOLO **************************/
-    .Titolo {
-        font-family: "Outfit";
-        font-size: 4vw;
-        font-weight: 200;
-        margin-top: 1em;
-    }
+/******************************* HEADER *****************************/
+.logo {
+  width: 10%;
+  margin-left: 1%;
+  margin-top: 2%;
+}
 
-    /****************************** PARAGRAFO ********************************/
-    .purple {
-        color: #d20094;
-    }    
 
-    .paragrafo {
-        margin-bottom: 3em;
-        font-family: "Inter";
-        font-weight: 200;
-    
-    }
-    /****************************** LISTA *********************************/
-    #lista {
-        margin-top: 5em;
-        margin-bottom: 8em;
-    }
+/****************************** DIV TITOLO **************************/
+.Titolo {
+  font-family: "Outfit";
+  font-size: 4vw;
+  font-weight: 200;
+  margin-top: 1em;
+}
 
-    .elenco {
-        margin-bottom: 1em;
-    }
-    /****************************** FORM *************************************/
-    
-/*********************CHECKBOX*****************************/
+/******************MAIN********************/
+main {
+  text-align: center;
+  margin-inline: 20%;
+  margin-top: 8%;
+}
 
-/* Stilizzazione base del contenitore della label */
-.custom-checkbox {
-    position: relative;
-    padding-left: 30px;
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 45%;
-  }
+
+.title {
+  /* font-family: ;*/
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/*****************VALUTAZIONE**********/
+#primoParagrafo {
+  text-align: center;
+  font-size: 26px;
+  margin-top: 0;
+  margin-left: 7%;
+}
+
+
+#stars {
+  font-size: 3em;
+}
+
+
+.star {
+  display: inline-block;
+  color: rgb(36, 33, 33);
+  cursor: pointer;
+  transition: color 0.2 ease;
+}
+
+
+.star:hover {
+  color: #00FFFf;
+}
+
+
+.star.active {
+  color: #00FFFf;
+}
+
+/************************FEEDBACK************/
+#secondoParagrafo{
+  text-align: left;
+  font-size: 2em;
+  margin-left: 7%;
+  margin-top: 6%;
+}
+
+
+input {
+  background: transparent;
+  width: 100%;
+  border-inline: none;
+  border-top: none;
+  border-bottom: 2px solid #d20094;
+  color: white;
+  margin-bottom: 5%;
+  outline: none;
+  padding-bottom: 1% 
+}
+
+
+input::placeholder{
+  font-size: 90%;
+  padding: 2%;
   
-  /* Nasconde l'input checkbox originale */
-  .custom-checkbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  /* Crea un contenitore personalizzato per il segno di spunta */
-  .custom-checkbox .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: transparent;
-    border: 2px solid #ccc; /* Bordo grigio */
-  }
-  
-  /* Quando l'utente seleziona la checkbox, cambia il colore del bordo e aggiunge un segno di spunta */
-  .custom-checkbox input:checked ~ .checkmark {
-    background-color: transparent;
-    border-color: rgb(252, 252, 252); /* Cambia colore del bordo se selezionato */
-  }
-  
-  /* Stile del segno di spunta */
-  .custom-checkbox .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Mostra il segno di spunta quando la checkbox è selezionata */
-  .custom-checkbox input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Stilizza il segno di spunta */
-  .custom-checkbox .checkmark:after {
-    left: 6px;
-    top: 2px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-  }
-  
+}
+
 
 /******************************** BOTTONE******************************************/
-    .button {
-    background-color: transparent;   
-    font-weight:bold;
-    text-transform: uppercase;
-    border: white 3px solid;
-    font-size: 20px;
-    width: 220px;
-    height: 60px;
-    box-sizing: content-box;
-   color: white;
-    }
+.button {
+  background-color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: white 3px solid;
+  font-size: 20px;
+  width: 220px;
+  height: 60px;
+  box-sizing: content-box;
+  color: white;
+}
 
-    .button:hover{
-        background-color:#00fff0;
-        box-sizing: content-box;
-        box-shadow: 0px 10px 40px  #00fff0;
-        color:black;
-        border: #00fff0;
-      
-        }
-       
-        .bold{
-        font-weight: bold;
-        }
-    
-    
-    
+.button:hover {
+  background-color: #00fff0;
+  box-sizing: content-box;
+  box-shadow: 0px 10px 40px #00fff0;
+  color: black;
+  border: #00fff0;
+
+}
+
+.bold {
+  font-weight: bold;
+}
+
