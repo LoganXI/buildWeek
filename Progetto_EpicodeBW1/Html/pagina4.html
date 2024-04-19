@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang="">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Questionario</title>
-    <link rel="stylesheet" href="../assets/CSS/index4.css">
-</head>
+    <link rel="stylesheet" href="/Progetto_EpicodeBW1/assets/CSS/index-test-unificato.css" />
+  </head>
 
-<body>
+  <body>
     <!--LOGO EPICODE-->
-    <header id="logo">
-
-        <div>
-            <img class="logo" src="../UI_materials/assets/epicode_logo.png" alt="LogoEpicode">
-
-        </div>
-
-
+    <header>
+      <div>
+        <img
+          class="logo"
+          src="/Progetto_EpicodeBW1/assets/img/epicode_logo.png"
+          alt="LogoEpicode"
+        />
+      </div>
     </header>
 
-    <main>
-        <!--Titolo pagina-->
-        <h2 class="title" >Tell us how it's going</h2>
+    <main id="stelle">
+      <!--Titolo pagina-->
+      <h2 class="title bold marginBottom">Tell us how it's going</h2>
 
-        <div id="valutazione">
+      <div id="valutazione">
+        <p id="primoParagrafo" class="marginBottom">
+          From 0 to 10, how likely are you to reccommend EPICODE to a friend or
+          a colleague?
+        </p>
 
-            <p id="primoParagrafo">From 0 to 10, how likely are you to reccommend EPICODE to a friend or a colleague?
-            </p>
-
-            <!--DIV CONTENENTE LE STELLE PER LA VALUTAZIONE-->
-            <div id="stars" aria-required="true">
-
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                
-
-            </div>
+        <!--DIV CONTENENTE LE STELLE PER LA VALUTAZIONE-->
+        <div id="stars" class="marginBottom" aria-required="true">
+          <ion-icon class="star" name="star"></ion-icon>
+          <ion-icon class="star" name="star"></ion-icon>
+          <ion-icon class="star" name="star"></ion-icon>
+          <ion-icon class="star" name="star"></ion-icon>
+          <ion-icon class="star" name="star"></ion-icon>
+          <ion-icon class="star" name="star"></ion-icon>
+          <ion-icon class="star" name="star"></ion-icon>
+          <ion-icon class="star" name="star"></ion-icon>
+          <ion-icon class="star" name="star"></ion-icon>
+          <ion-icon class="star" name="star"></ion-icon>
         </div>
+      </div>
 
-        <!--FEEDBACK-->
-        <form id="feedback">
+      <!--FEEDBACK-->
+      <form id="feedback" action="https://epicode.com/it" >
+        <p id="secondoParagrafo" class="marginBottom">
+          Leave us an open feedback about your experience so far
+        </p>
 
-            <p id="secondoParagrafo" >Leave us an open feedback about your experience so far </p>
+        <input
+          id="input" 
+          type="text"
+          class="marginTop"
+          placeholder="Write your comment here"
+          required
+        />
 
-            <input type="text" placeholder="Write your comment here" required>
-            
-
-            <button class="button"><a href=""></a>MORE INFO</button>
-
-        </form>
-
-
+        <button class="button marginTop marginBottom2"><a href=""></a>MORE INFO</button>
+      </form>
     </main>
 
-    <script src="../scripts/question4.js" defeder></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script src="/Progetto_EpicodeBW1/scripts/script.js" defeder></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

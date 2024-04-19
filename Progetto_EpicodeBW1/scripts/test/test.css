@@ -1,0 +1,84 @@
+body {
+    background-image: url(/Progetto_EpicodeBW1/assets/img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .main {
+    text-align: center;
+  }
+  
+  .question {
+    margin-bottom: 1em;
+  }
+  
+  .answers {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+  
+  .timer-svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .timer-circle {
+    fill: transparent;
+    stroke-width: 7px;
+    /* stroke-linecap: round; */
+  }
+  
+  .timer-circle-base {
+    stroke: #00FFFF;
+  }
+  
+  .timer-circle-progress {
+    transform: rotate(270deg);
+    transform-origin: center;
+    stroke: #ccc;
+    transition: stroke-dashoffset 1s linear;  
+    
+  }
+  
+  .timer-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.3em;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+  }
+  
+  .secondi{
+    text-align: center ;
+    font-size: 4em;
+    font-weight: bold;
+  }

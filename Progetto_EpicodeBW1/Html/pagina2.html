@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Questionario</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="/Progetto_EpicodeBW1/assets/CSS/index2.css">
-</head>
-<body>
-    <div id="container">
-        <header class="header" >
-            <div class="timer-container">
-                <svg class="timer-svg">
-                  <circle class="timer-circle timer-circle-base" cx="50%" cy="50%" r="48%"></circle>
-                  <circle class="timer-circle timer-circle-progress" cx="50%" cy="50%" r="48%"></circle>
-                </svg>
-                <div class="timer-label"></div>
-            </div>
-            <img class="logo" src="/Progetto_EpicodeBW1/assets/img/epicode_logo.png" alt="logo epicode">
-            
-        </header>
-        <main>
-            <h2 id="question"></h2>
-            <div id="answers" class="Q&A">
+    <link rel="stylesheet" href="/Progetto_EpicodeBW1/assets/CSS/index-test-unificato.css" />
+  </head>
 
-            </div>
-        </main>
-        <footer id="foot">   
-        </footer>
+  <body>
+    <div id="container">
+      <header>
+        <img
+          class="logo"
+          src="/Progetto_EpicodeBW1/assets/img/epicode_logo.png"
+          alt="logo epicode"
+        />
+      </header>
+      <div class="timer-container">
+        <svg class="timer-svg" width="100%" height="100%">
+          <circle
+            class="timer-circle timer-circle-base"
+            r="45"
+            cx="50%"
+            cy="50%"
+          ></circle>
+          <circle
+            class="timer-circle timer-circle-progress"
+            r="45"
+            cx="50%"
+            cy="50%"
+            stroke-dasharray="360"
+            stroke-dashoffset="360"
+          ></circle>
+        </svg>
+        <div class="timer-label">
+          SECONDS<br /><br />
+          <div class="secondi">00</div>
+          <br />REMAINING
+        </div>
+      </div>
+
+      <main>
+        <h2 id="question"></h2>
+        <div id="answers" class="Q&A"></div>
+      </main>
+      <footer id="foot"></footer>
     </div>
-    
-</body>
-<script src="/Progetto_EpicodeBW1/scripts/pag2.js"></script>
+  </body>
+  <script src="/Progetto_EpicodeBW1/scripts/script.js"></script>
 </html>

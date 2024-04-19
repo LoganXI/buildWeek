@@ -4,42 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/CSS/style.css">
-    <link rel="stylesheet" href="../assets/CSS/reset.css">
+    <link rel="stylesheet" href="/Progetto_EpicodeBW1/assets/CSS/index-test-unificato.css">
     <title>Pagina 3</title>
 </head>
 
 <body>
 
 
-    <div class="container">
         <header>
             <div class="logo">
-                <img src="../assets/img/epicode_logo.png" alt="logo epicode" height="50">
-
+                <img src="/Progetto_EpicodeBW1/assets/img/epicode_logo.png" alt="logo epicode" height="50">
             </div>
         </header>
 
         <main>
 
             <div class="title">
-                <h1> Results </h1>
-                <p>the summary of your answers</p>
+                <h2 class="bold"> Results </h2>
+                <p>The summary of your answers</p>
             </div>
 
-            <div id="Results" class="Boxes">
+            <div id="Results" >
 
                 <div class="correctDiv">
-                    <h1>CORRECT</h1>
-                    <p id="correct-percentual" class="correct-result"></p>
-                    <p class="questions"><span id="span-correct"></span> / 10 questions </p>
+                    <h2>Correct</h2>
+                    <h2 id="correct-percentual" class="correct-result bold"></h2>
+                    <h3 class="questions"><span id="span-correct"></span> / <span id="span-totc"></span> questions </h3>
                 </div>
 
-                <div class="chart-box">
+                <div id="chart-box">
 
                     <canvas id="my-chart" class="center"></canvas>
 
-                    <div id="text-inner-chart" class="div-into-chart">
+                    <div id="text-inner-chart">
 
                         <!--inserimento del templates
                             <h1 class='headingText'></h1>              -> titolo
@@ -53,15 +50,15 @@
 
 
                 <div class="wrongDiv">
-                    <h1> WRONG</h1>
-                    <p id="un-result" class="uncorrect-result"></p>
-                    <p class="questions"><span id="span-wrong"></span> / 10 questions </p>
+                    <h2> Wrong</h2>
+                    <h2 id="un-result" class="uncorrect-result bold"></h2>
+                    <h3 class="questions"><span id="span-wrong"></span> / <span id="span-totw"></span> questions </h3>
                 </div>
 
             </div>
 
 
-            <div class="buttonDiv center">
+            <div class="center marginTop2">
                 <button class="button" onclick="window.location.href='pagina4.html'"><span class="rate-me-text">RATE US</span></button>
             </div>
 
@@ -70,11 +67,11 @@
 
         </main>
 
-    </div>
+   
 
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../scripts/script3.js"></script>
+    <script src="/Progetto_EpicodeBW1/scripts/script.js"></script>
 </body>
 
 </html>

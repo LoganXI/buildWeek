@@ -1,0 +1,453 @@
+/*************************** Cose uguali per tutti *********************/
+
+/* Aggiunta dei font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+@import url(/Progetto_EpicodeBW1/assets/CSS/reset.css);
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Usa Inter come font predefinito */
+    background-image: url(/Progetto_EpicodeBW1/assets/img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding:1.5em 4em 4em 4em;
+    font-size: 0.8em;
+    height: 100vh;
+}    
+
+header{
+  margin-bottom: 3em;
+  padding:1em 1em 1em 0em;
+  
+}
+
+.logo {
+    width: 150px;    
+}
+
+h1, h2, h3,h4, h5 {
+    font-family: 'Outfit', Arial, sans-serif; /* Usa Outfit per i titoli */
+}
+
+h1{
+  font-size: 60px;
+}
+
+h2{
+  font-size: 50px
+}
+
+h3{
+  font-size: 20px
+}
+
+h4{
+  font-size: 10px
+}
+
+h5{
+  font-size: 10px
+}
+
+footer {
+    text-align: center;
+    padding:3em 3em 3em 3em;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.purple {
+    color: #d20094;
+}
+
+.marginBottom{
+    margin-bottom: 1em;
+}
+.marginTop{
+  margin-top: 1.5em;
+}
+
+.marginBottom2{
+  margin-bottom: 2em;
+}
+
+.marginTop2{
+  margin-top: 3em;
+}
+
+.azzure {
+    color: #00ffff;
+}
+
+.font-size{
+  font-size: 4.2em;
+}
+
+.center{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/******************************** BOTTONI Generici******************************************/
+.button {
+    background-color: transparent;   
+    font-weight:bold;
+    text-transform: uppercase;
+    border: white 3px solid;
+    font-size: 20px;
+    width: 220px;
+    height: 60px;
+    box-sizing: content-box;
+    color: white;
+}
+
+.button:hover{
+    background-color:#00fff0;
+    box-sizing: content-box;
+    box-shadow: 0px 10px 40px  #00fff0;
+    color:black;
+    border: #00fff0;
+}
+
+/*********************CHECKBOX pagina 1*****************************/
+
+/* Stilizzazione base del contenitore della label */
+.custom-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 45%;
+  }
+  
+  /* Nasconde l'input checkbox originale */
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+  
+  /* Crea un contenitore personalizzato per il segno di spunta */
+.custom-checkbox .checkmark {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 2px solid #ccc; /* Bordo grigio */
+}
+
+/* Quando l'utente seleziona la checkbox, cambia il colore del bordo e aggiunge un segno di spunta */
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: transparent;
+  border-color: rgb(252, 252, 252); /* Cambia colore del bordo se selezionato */
+}
+
+/* Stile del segno di spunta */
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+  
+/* Mostra il segno di spunta quando la checkbox è selezionata */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Stilizza il segno di spunta */
+.custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 0;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+/****************************** LISTA *********************************/
+#lista {
+    margin-top: 5em;
+    margin-bottom: 8em;
+    padding-left: 2em;
+}  
+
+.elenco {
+    margin-bottom: 1em;
+}
+
+/*************************** Pagina 2 - Stili per i bottoni *********************/
+#answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding:2em;
+}
+
+.btn {
+  margin-block: 2em ;
+  margin-inline: 2em;
+  width: 15em;
+  background:
+   linear-gradient(transparent, transparent) padding-box, 
+   linear-gradient(to bottom, #665f5f00, #aa989833) border-box;
+  color: white;
+  padding: 20px 70px;
+  border: 3px solid white;
+  border-radius: 40px;
+  display: inline-block;
+  font-size: 28px;
+  border-bottom: #665f5f00;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #d20094;
+  border-bottom: 3px solid #d20094;
+  cursor: pointer;
+}
+
+#question{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 1.5em 3em 1.5em 3em;
+}
+/****************************** timer *********************************/
+
+.timer-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 3em 1em 1em;
+  box-sizing: border-box;
+}
+
+.timer-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.timer-circle {
+  fill: transparent;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.timer-circle-base {
+  stroke: #00FFFF;
+}
+
+.timer-circle-progress {
+  transform: rotate(270deg);
+  transform-origin: center;
+  stroke: #ccc;
+  transition: stroke-dashoffset 1s linear;
+
+}
+
+.timer-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -50%);
+  font-size: 0.3em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+}
+  
+.secondi {
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+/****************************** grafico e pagina 3 *********************************/
+
+/************************* title  *************************/
+
+
+
+.title {
+  line-height: 3em;
+  text-align: center;
+}
+
+
+
+/************************* content *************************/
+
+#Results {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* .correctDiv,
+.wrongDiv,
+.chart-box {
+  text-align: center;
+
+} */
+
+.correctDiv,
+.wrongDiv {
+  font-size: 40pt;
+}
+
+.correctDiv {
+  margin-left: 4em;
+  text-align: left;
+}
+
+.correct-result,
+.uncorrect-result {
+  font-size: 50pt;
+}
+
+.wrongDiv {
+  margin-right: 4.5em;
+  text-align: right;
+}
+
+.questions {
+    color: rgba(255, 255, 255, 0.514);
+}
+
+#chart-box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#text-inner-chart {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    word-wrap: break-word;
+    border-radius: 50%;
+    line-height: 1;
+    padding:1em 1.5em;
+}
+
+.headingText {
+    margin-top: 2em;
+    line-height: 0;
+    font-size: 1.5em;
+}
+
+.subtitleText {
+    font-size: 1em;
+    margin-top:1em;
+    margin-bottom: 1em; 
+}
+
+.descriptionText {
+    color: rgba(255, 255, 255, 0.734);
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+
+
+/*****************VALUTAZIONE pagina 4*****************/
+
+#stelle{
+  padding:3em 5em 0 5em;
+  text-align: center;
+  justify-items: center;
+}
+
+#primoParagrafo {
+    
+    font-size: 26px;
+  }
+  
+  
+  #stars {
+    font-size: 3em;
+  }
+  
+  
+  .star {
+    display: inline-block;
+    color: rgb(36, 33, 33);
+    cursor: pointer;
+    transition: color 0.2 ease;
+  }
+  
+  
+  .star:hover {
+    color: #00FFFf;
+  }
+  
+  
+  .star.active {
+    color: #00FFFf;
+  }
+
+  #secondoParagrafo{
+   
+    font-size: 2em;
+    margin-top: 6%;
+  }
+  
+  
+  #input {
+    background: transparent;
+    width: 100%;
+    border-inline: none;
+    border-top: none;
+    border-bottom: 2px solid #d20094;
+    color: white;
+    margin-bottom: 5%;
+    outline: none;
+    padding-bottom: 1% 
+  }
+  
+  
+  #input::placeholder{
+    font-size: 90%;
+    padding: 2%;
+    
+  }
