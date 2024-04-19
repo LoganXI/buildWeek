@@ -312,6 +312,7 @@ const chartData = {
         var result = [uncorrect, correct]
 
         document.getElementById('correct-percentual').innerHTML = `${correct * 100 / tot}%`
+
         document.getElementById('un-result').innerHTML = `${uncorrect * 100 / tot}%`
 
         document.getElementById('span-correct').innerHTML = `${correct}`
@@ -325,25 +326,25 @@ const chartData = {
         if (correct >= 6) {
             document.getElementById('text-inner-chart').innerHTML =
                 `
-            <h1 class='headingText'>Congratulation!</h1>      
-            <p class='subtitleText azzure'>You passed the exam.</p>
+            <h1 class='headingText bold'>Congratulation!</h1>      
+            <p class='subtitleText azzure bold'>You passed the exam.</p>
             <p class='descriptionText'>We'll send you the certificate in few minutes. Check you email (including promotions / spam folder)</p>    
             `
         }
-        if (correct == 5) {
+        // if (correct == 5) {
+        //     document.getElementById('text-inner-chart').innerHTML =
+        //         `
+        //     <h1 class='headingText bold'>Oh crap!</h1>      
+        //     <p class='subtitleText azzure bold'>You almost did it.</p>
+        //     <p class='descriptionText'>You probably deserve a 6 or major score, but that is not what happened.<br>Just try next time</p>    
+        //     `
+        // }
+        if (correct <= 5) {
             document.getElementById('text-inner-chart').innerHTML =
                 `
-            <h1 class='headingText'>Oh crap!</h1>      
-            <p class='subtitleText azzure'>You almost did it.</p>
-            <p class='descriptionText'>You probably deserve a 6 or major score, but that is not what happened.<br>Just try next time</p>    
-            `
-        }
-        if (correct < 5) {
-            document.getElementById('text-inner-chart').innerHTML =
-                `
-            <h1 class='headingText'>What a mess bro!</h1>      
-            <p class='subtitleText azzure'>You did not passed the exam.</p>
-            <p class='descriptionText'>We'll send you a croissant in few minutes. Check you email (including promotions / spam folder)</p>    
+            <h1 class='headingText bold'>Sorry!</h1>      
+            <p class='subtitleText azzure bold'>You did not passed the exam.</p>
+            <p class='descriptionText'>You can try raise your score next time. Check you email (including promotions / spam folder)</p>    
             `
         }
 
