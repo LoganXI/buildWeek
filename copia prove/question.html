@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./index.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+  
+          var data = google.visualization.arrayToDataTable([
+            ['Effort', 'Amount given'],
+            ['time',     30],
+          ]);
+  
+          var options = {
+            pieHole: 0.6,
+            pieSliceTextStyle: {
+              color: 'black',
+            },
+            legend: 'none',
+            pieStartAngle: 100,
+            backgroundColor: 'transparent', // Imposta lo sfondo trasparente
+            chartArea: {width: '100%', height: '80%'}
+  
+          var chart = new google.visualization.PieChart(document.getElementById('donut_single'));
+          chart.draw(data, options);
+        }
+      }
+      </script>
+</head>
+<body>
+    
+    <header>
+        <div class="logo"></div>
+        <div id="donut_single" style="width: 900px; height: 500px;"></div>
+    </header>
+    <main>
+        <div id="question" class="question">Domanda qui</div>
+        <div id="answers" class="answers">
+            <button onclick="checkAnswer('risposta1')">Risposta 1</button>
+            <button onclick="checkAnswer('risposta2')">Risposta 2</button>
+            <button onclick="checkAnswer('risposta3')">Risposta 3</button>
+        </div>
+    </main>
+    <footer>
+        <div id="questionCounter" class="question-counter">Domanda 1 di 10</div>
+    </footer>
+    
+    <script src="./question.js"></script>
+</body>
+</html>

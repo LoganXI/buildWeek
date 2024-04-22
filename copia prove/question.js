@@ -145,22 +145,4 @@ const questions = [
 
 // BUON LAVORO 💪🚀
 
-const totalTime = 30; // Ad esempio, 30 seconds
-const progress = document.querySelector('.timer-circle-progress');
-const label = document.querySelector('.secondi');
-const updateInterval = 1000;
-const increment = 280 / totalTime;
-let timeLeft = totalTime;
 
-function updateTimer() {
-  progress.style.strokeDashoffset = (timeLeft * increment);
-  label.textContent = timeLeft;
-  timeLeft--;
-
-  if (timeLeft < 0) {
-    clearInterval(timerInterval);
-    label.textContent = 'Tempo scaduto';
-  }
-}
-
-var timerInterval = setInterval(updateTimer, updateInterval);

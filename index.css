@@ -1,116 +1,81 @@
-
-
 body {
   background-image: url(./UI_materials/assets/bg.jpg);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  padding: 0;
-  margin: 0;
-  color: white;
-  font-size: 16px;
-  display:flex;
-  border: 2px solid white;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
+.main {
+  text-align: center;
+}
 
-.header{
-  border: 2px solid red;
+.question {
+  margin-bottom: 1em;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.timer-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.timer-circle {
+  fill: transparent;
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.timer-circle-base {
+  stroke: #00FFFF;
+}
+
+.timer-circle-progress {
+  stroke: #ccc;
+  transition: stroke-dashoffset 1s linear;  
+}
+
+.timer-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.3em;
+  margin: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
   
 }
 
-.purple {
-  color: #d20094;
-}
-
-.button {
-  font-weight: bold;
-  border: 2px solid #white;
-  padding: 0.5em;
-  margin: ;
-  text-align: center;
-  shadow: ;
-}
-
-.button:hover {
-  background-color: #00ffff;
-  color: #bbb;
-  shadow: ;
-}
-
-.bold {
+.secondi{
+  text-align: center ;
+  font-size: 4em;
   font-weight: bold;
 }
-
-.azzure {
-  color: #00ffff;
-}
-
-.violetto {
-  color: #d20094;
-}
-
-.logo {
-  text-align: left;
-  padding: 2em;
-  width: 150px;
-  height: 35px;
-  border: 2px solid purple;
-}
-
-.btn {
-  border: 2px solid white;
-  border-radius: ;
-  padding: ;
-  margin: ;
-  text-align: center;
-  background-color: 0 0 0 0;
-}
-
-.btn:hover {
-  border: 3px solid #d20094;
-  background-color: #900080;
-}
-/*             timer             */
-
-.timer-container {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-    float:right;
-  }
-  .timer-svg {
-    width: 100%;
-    height: 100%;
-  }
-  .timer-circle {
-    fill: transparent;
-    stroke-width: 4;
-    stroke-linecap: round;
-  }
-  .timer-circle-base {
-    stroke: #ccc; /* Colore del bordo della barra */
-  }
-  .timer-circle-progress {
-    stroke: #007bff; /* Colore della barra di progresso */
-    transition: stroke-dashoffset 1s linear; /* Animazione del progresso */
-  }
-  .timer-label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
-    font: initial;
-    border: 2px solid yellow;
-  }
-
-  .main{
-    border: 2px solid green;
-  }
-  .footer{
-    border: 2px solid blue;
-  }
